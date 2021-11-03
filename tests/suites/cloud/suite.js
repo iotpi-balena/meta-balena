@@ -239,5 +239,6 @@ module.exports = {
     "./tests/preload",
     "./tests/supervisor",
     "./tests/multicontainer",
+    "./tests/ssh-login",
   ],
 };

@@ -116,19 +116,5 @@ module.exports = {
 
 	},
 	tests: [
-		'./tests/fingerprint',
-		'./tests/os-release',
-		'./tests/chrony',
-		'./tests/kernel-overlap',
-		'./tests/bluetooth',
-		'./tests/healthcheck',
-		'./tests/variables',
-		'./tests/led',
-		'./tests/config-json',
-		'./tests/boot-splash',
-		'./tests/connectivity',
-		'./tests/udev',
-		'./tests/device-tree',
-		'./tests/purge-data',
 	],
 };

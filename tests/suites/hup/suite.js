@@ -333,8 +333,5 @@ module.exports = {
 			.hup.runRegistry(this, this.context.get().hupOs.image.path);
 	},
 	tests: [
-		'./tests/smoke',
-		'./tests/rollback-altboot',
-		'./tests/rollback-health',
 	],
 };

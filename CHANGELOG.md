@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.89.0
+## (2021-12-08)
+
+* Adds modems to os test suite [Alex Bucknall]
+
 # v2.88.7
 ## (2021-12-06)
 

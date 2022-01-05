@@ -1,4 +1,43 @@
 - commits:
+    - subject: Update ModemManager to v1.18.4
+      hash: e2d22b6c71b580e17658f6af7aebd82c6440bac6
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Update ModemManager to v1.18.4
+        changelog-entry: Update ModemManager to v1.18.4
+        Signed-off-by: Zahari Petkov <zahari@balena.io>
+        signed-off-by: Zahari Petkov <zahari@balena.io>
+      author: Zahari Petkov
+      nested: []
+    - subject: Update libqmi to version 1.30.2
+      hash: 287dd7369c6b74495e40b1a7c26d8a0e774c896f
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Update libqmi to version 1.30.2
+        changelog-entry: Update libqmi to version 1.30.2
+        Signed-off-by: Zahari Petkov <zahari@balena.io>
+        signed-off-by: Zahari Petkov <zahari@balena.io>
+      author: Zahari Petkov
+      nested: []
+    - subject: Update libmbim to version 1.26.2
+      hash: 28716882c7ec8ced7c18d645cfdf09d69c143eac
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Update libmbim to version 1.26.2
+        changelog-entry: Update libmbim to version 1.26.2
+        Signed-off-by: Zahari Petkov <zahari@balena.io>
+        signed-off-by: Zahari Petkov <zahari@balena.io>
+      author: Zahari Petkov
+      nested: []
+  version: 2.88.17
+  date: 2022-01-05T12:57:37.098Z
+- commits:
     - subject: 'balena-os.inc: Switch balena backend storage to overlay2'
       hash: 90b2630937ecc3171fd925a9c679ab1b20c20a4c
       body: |

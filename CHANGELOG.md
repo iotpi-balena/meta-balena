@@ -1,6 +1,31 @@
 Change log
 -----------
 
+# v2.89.0
+## (2022-01-11)
+
+* hostapp-update-hooks: Add current state migration [Alex Gonzalez]
+* package-group-resin: Replace hostapp-extensions-update [Alex Gonzalez]
+* Add update-data-store to replace update-hostapp-extensions [Alex Gonzalez]
+* README: Add a section for the overlay data blocks [Alex Gonzalez]
+* Add app UUID and service name labels to supervisor container [Alex Gonzalez]
+* docker-disk: Allow to define a custom CA [Alex Gonzalez]
+* Install data store images [Alex Gonzalez]
+* docker-disk: balena-apps: Add functions for blocks support [Alex Gonzalez]
+* Revert "docker-disk: Add the host extension images to the data partition" [Alex Gonzalez]
+* Revert "resin-vars: Parse the HOSTEXT_IMAGES variable from config.json" [Alex Gonzalez]
+* docker-disk: entry.sh: replace repository/tag for app/version [Alex Gonzalez]
+* docker-disk: Replace repository/tag for app/version [Alex Gonzalez]
+* docker-disk: Add balena-apps file [Alex Gonzalez]
+* update-balena-supervisor: abstract fetching target state to library function [Alex Gonzalez]
+* os-helpers-api: Add os_helpers_fetch_target_state [Alex Gonzalez]
+* balena-supervisor: tag the supervisor container [Alex Gonzalez]
+* update-balena-supervisor: Remove command line arguments [Alex Gonzalez]
+* resin-device-register: Use supervisor version label instead of tag [Alex Gonzalez]
+* Adapt balena-supervisor nomenclature to Balena's register pull [Alex Gonzalez]
+* distro: balena-os: Add default cloud environment distro setting [Alex Gonzalez]
+* Add a os-helper-api target script library [Alex Gonzalez]
+
 # v2.88.17
 ## (2022-01-10)
 

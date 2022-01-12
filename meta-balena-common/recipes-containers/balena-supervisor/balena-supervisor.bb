@@ -48,9 +48,9 @@ RDEPENDS:${PN} = " \
 	"
 
 python () {
-    supervisor_repository = d.getVar('SUPERVISOR_REPOSITORY', True)
-    if not supervisor_repository:
-        bb.fatal("balena-supervisor-disk: There is no support for this architecture.")
+    supervisor_app = d.getVar('SUPERVISOR_APP', True)
+    if not supervisor_app:
+        bb.fatal("balena-supervisor: There is no support for this architecture.")
 }
 
 S = "${WORKDIR}"
@@ -79,8 +79,8 @@ do_install () {
 	# Generate supervisor conf
 	install -d ${D}${sysconfdir}/balena-supervisor/
 	install -m 0755 ${WORKDIR}/supervisor.conf ${D}${sysconfdir}/balena-supervisor/
-	sed -i -e 's:@LED_FILE@:${LED_FILE}:g' ${D}${sysconfdir}/balena-supervisor/supervisor.conf
-	sed -i -e 's:@SUPERVISOR_TAG@:${SUPERVISOR_TAG}:g' ${D}${sysconfdir}/balena-supervisor/supervisor.conf
+	sed -i -e "s,@LED_FILE@,${LED_FILE},g" ${D}${sysconfdir}/balena-supervisor/supervisor.conf
+	sed -i -e "s,@SUPERVISOR_VERSION@,${SUPERVISOR_VERSION},g" ${D}${sysconfdir}/balena-supervisor/supervisor.conf
 	sed -i -e "s,@SUPERVISOR_IMAGE@,${SUPERVISOR_IMAGE},g" ${D}${sysconfdir}/balena-supervisor/supervisor.conf
 
 	install -d ${D}/resin-data
@@ -115,6 +115,6 @@ do_install () {
 }
 
 do_deploy () {
-	echo ${SUPERVISOR_TAG} > ${DEPLOYDIR}/VERSION
+	echo ${SUPERVISOR_VERSION} > ${DEPLOYDIR}/VERSION
 }
 addtask deploy before do_package after do_install

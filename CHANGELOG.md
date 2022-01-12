@@ -1,6 +1,17 @@
 Change log
 -----------
 
+# v2.89.0
+## (2022-01-12)
+
+* docker-disk: Add balena-apps file [Alex Gonzalez]
+* Add a os-helper-api target script library [Alex Gonzalez]
+* resin-device-register: Use supervisor version label instead of tag [Alex Gonzalez]
+* balena-supervisor: Rename repository/tag to app/version [Alex Gonzalez]
+* docker-disk: Pull images from Balena's registry [Alex Gonzalez]
+* balena-supervisor: Use image location path instead of repository:tag [Alex Gonzalez]
+* distro: balena-os: Add default cloud environment distro setting [Alex Gonzalez]
+
 # v2.88.17
 ## (2022-01-10)
 

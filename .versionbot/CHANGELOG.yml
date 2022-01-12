@@ -1,4 +1,90 @@
 - commits:
+    - subject: 'docker-disk: Add balena-apps file'
+      hash: b66bae4555dc6e94d0a68b73c0b68d6ad524c91e
+      body: |
+        This include file contains utility functions that call the balena API
+        when building the data disk.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: Add a os-helper-api target script library
+      hash: 1d9fe41e8d3f497da2808497ddb4dce44b140c42
+      body: |
+        The update scripts need to share some common API related code.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Add a os-helper-api target script library
+        changelog-entry: Add a os-helper-api target script library
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: 'resin-device-register: Use supervisor version label instead of tag'
+      hash: ab824aaf472737265afd51a104aadd274b424cc9
+      body: >
+        This is just a name change that reflects the wider change that the
+
+        supervisor is no longer fetched from dockerhub but from Balena's
+        registry.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: 'balena-supervisor: Rename repository/tag to app/version'
+      hash: 7f8eeb60d836d831dfc1b1a5faca27b32637664d
+      body: |
+        It should really be fleet/version
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: 'docker-disk: Pull images from Balena''s registry'
+      hash: 6801d7ebbdba0f8caadf17827d7552c6dcfae740
+      body: |
+        Stop using dockerhub to pull container images from.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: 'balena-supervisor: Use image location path instead of repository:tag'
+      hash: 0cf7765cf038b45d5b90adbb82e58b8d5f8c0ccb
+      body: |
+        Balena's registry does not use repository:tag to identify images but
+        the image location path.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: 'distro: balena-os: Add default cloud environment distro setting'
+      hash: fee5d392dc96469cd512debb84eb780f6f466361
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.89.0
+  date: 2022-01-12T11:18:52.840Z
+- commits:
     - subject: 'recipes-core/coreutils: Use 64bit time symbols'
       hash: 1c86b30cbad9eecb74185610d146a71f81f70857
       body: |

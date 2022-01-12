@@ -58,10 +58,10 @@ for image_name in ${HOSTEXT_IMAGES}; do
 		exit 1
 	fi
 # Pull in the supervisor image as a separate app until it converges in the hostOS
-if [ -n "${TARGET_REPOSITORY}" ] && [ -n "${TARGET_TAG}" ]; then
-	_supervisor_image=$(balena_api_fetch_image_from_app "${TARGET_REPOSITORY}" "${BALENA_API_ENV}" "${TARGET_TAG}" "${BALENAOS_TOKEN}")
+if [ -n "${SUPERVISOR_APP}" ] && [ -n "${SUPERVISOR_VERSION}" ]; then
+	_supervisor_image=$(balena_api_fetch_image_from_app "${SUPERVISOR_APP}" "${BALENA_API_ENV}" "${SUPERVISOR_VERSION}" "${BALENAOS_TOKEN}")
 	_supervisor_image_id=$( docker images --filter=reference="${_supervisor_name%@*}" --format "{{.ID}}")
-	docker tag "${_supervisor_image_id}" "balena_supervisor":"${TARGET_TAG}"
+	docker tag "${_supervisor_image_id}" "balena_supervisor":"${SUPERVISOR_VERSION}"
 fi
 done
 

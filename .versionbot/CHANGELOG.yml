@@ -1,4 +1,47 @@
 - commits:
+    - subject: 'tests: os: optimize issue tests'
+      hash: 02894d83489c15f51d9aaa780e2656031b97127e
+      body: |
+        Convert issue tests to use promises, and run operations in parallel
+        where possible.
+
+        Testing shows this change to be approximately 25-30% faster when running
+        this single test.
+
+        - ok 1 - Unmanaged BalenaOS release suite # time=75206.585ms
+        + ok 1 - Unmanaged BalenaOS release suite # time=54918.529ms
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Joseph Kogut <joseph@balena.io>
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+      author: Joseph Kogut
+      nested: []
+    - subject: 'recipes-core/bash: Use 64bit time symbols'
+      hash: d26b1a09a6ac8a0def6ab2ec4d0249884aacb738
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+    - subject: 'recipes-core/busybox: Use 64bit time symbols'
+      hash: 989c0a3584b99bf637f2a727f8a6bda11fb05441
+      body: |
+        So that commands like find can work with
+        files that have incorrect timestamps on 32bit systems.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2.88.22
+  date: 2022-01-18T18:13:13.360Z
+- commits:
     - subject: 'tests: os: config-json: cleanup persistentLogging test'
       hash: 1625e14c13da802e0bbd39467b106155861441be
       body: |

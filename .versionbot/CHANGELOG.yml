@@ -1,4 +1,21 @@
 - commits:
+    - subject: Make sure u-boot is able to import an environment file
+      hash: 18fcc2259454e7cc02f260bcaa48819c61fd07a3
+      body: |
+        BalenaOS requires the `env import` command to be available so make sure
+        to configure u-boot accordingly.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Make sure u-boot is able to import an environment file
+        changelog-entry: Make sure u-boot is able to import an environment file
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.89.5
+  date: 2022-01-24T15:06:57.481Z
+- commits:
     - subject: 'tests: add cloud test suite'
       hash: 4955539b5cd0b9ab5c56ce76f92847fa637ce90b
       body: ''

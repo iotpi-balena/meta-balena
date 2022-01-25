@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.89.6
+## (2022-01-25)
+
+* resindataexpander: expand fs independent of partition [Joseph Kogut]
+
 # v2.89.5
 ## (2022-01-24)
 

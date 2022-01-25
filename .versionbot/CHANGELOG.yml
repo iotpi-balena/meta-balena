@@ -1,4 +1,25 @@
 - commits:
+    - subject: 'resindataexpander: expand fs independent of partition'
+      hash: 7cd65e8b26e53350804dabf0fedde5612657b1ee
+      body: |
+        When resizing the filesystem fails, such as when resize2fs won't touch
+        it because it's dirty, the partition gets resized, but not the
+        filesystem. The script will not attempt to resize the filesystem again,
+        as it detects the partition has already been resized.
+
+        Split these actions apart, so that the filesystem resize is always
+        attempted. If resize2fs detects that the filesystem is already filling
+        available space, it will exit with no action taken.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Joseph Kogut <joseph@balena.io>
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+      author: Joseph Kogut
+      nested: []
+  version: 2.89.6
+  date: 2022-01-25T18:47:30.744Z
+- commits:
     - subject: 'os: tests: optimize fingerprint tests'
       hash: 64afc5f3ca862cd23c639f702b00a55a4527f296
       body: |

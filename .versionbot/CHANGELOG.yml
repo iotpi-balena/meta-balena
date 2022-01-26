@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Use worker contracts in test suites'
+      hash: f938f74284c0f9debbc433732daaf3909a710061
+      body: ''
+      footer:
+        Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+        signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+      author: Vipul Gupta (@vipulgupta2048)
+      nested: []
+  version: 2.89.7
+  date: 2022-01-26T16:46:04.568Z
+- commits:
     - subject: 'classes/kernel-balena: Update aufs patches for kernel 5.10.82'
       hash: 83a1ae95bef32ccfb54a742649165f0311c7ae7e
       body: |

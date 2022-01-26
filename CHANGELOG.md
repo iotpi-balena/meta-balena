@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.89.7
+## (2022-01-26)
+
+* patch: Use worker contracts in test suites [Vipul Gupta (@vipulgupta2048)]
+
 # v2.89.6
 ## (2022-01-26)
 

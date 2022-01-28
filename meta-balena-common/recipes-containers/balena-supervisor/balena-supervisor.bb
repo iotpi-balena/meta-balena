@@ -66,7 +66,8 @@ api_fetch_supervisor_image() {
 	_token="${BALENA_API_TOKEN}"
 	[ -z "${_token}" ] && [ -f "~/.balena/token" ] && _token=$(cat "~/.balena/token") || true
 
-	curl -X GET --silent -k \
+    echo "CURL supervisor image"
+	curl -X GET -k \
 	"https://api.${_api_env}/v6/supervisor_release?\$select=image_name&\$filter=(is_for__device_type/slug%20eq%20%27${_slug}%27)%20and%20(supervisor_version%20eq%20%27${_version}%27)" \
 	-H "Content-Type: application/json" \
 	-H "Authorization: Bearer ${_token}" | jq -r '.d[].image_name'

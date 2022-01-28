@@ -9,7 +9,8 @@ FILES:${PN} = "/boot"
 do_install() {
     mkdir -p ${D}/boot
     for type in ${KERNEL_IMAGETYPE}; do
-        install -m 0644 ${DEPLOY_DIR_IMAGE}/${type}-initramfs-${MACHINE}.bin ${D}/boot/${type}
+        install -m 0644 ${DEPLOY_DIR_IMAGE}/Image-initramfs-${MACHINE}.bin ${D}/boot/${type}
+        # install -m 0644 ${DEPLOY_DIR_IMAGE}/${type}-initramfs-${MACHINE}.bin ${D}/boot/${type}
         if [ -f "${DEPLOY_DIR_IMAGE}/${type}.initramfs.sig" ]; then
             install -m 0644 ${DEPLOY_DIR_IMAGE}/${type}.initramfs ${D}/boot/${type}
             install -m 0644 "${DEPLOY_DIR_IMAGE}/${type}.initramfs.sig" "${D}/boot/${type}.sig"

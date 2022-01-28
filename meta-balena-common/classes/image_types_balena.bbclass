@@ -145,7 +145,7 @@ device_specific_configuration() {
     echo "No device specific configuration"
 }
 
-IMAGE_CMD:balenaos-img () {
+IMAGE_CMD_balenaos-img () {
     #
     # Partition size computation (aligned to BALENA_IMAGE_ALIGNMENT)
     #
@@ -371,18 +371,18 @@ IMAGE_CMD:balenaos-img () {
 do_rootfs[vardeps] += "BALENA_BOOT_PARTITION_FILES"
 
 # XXX(petrosagg): This should be eventually implemented using a docker-native daemon
-IMAGE_CMD:docker () {
+IMAGE_CMD_docker () {
     DOCKER_IMAGE=$(${IMAGE_CMD_TAR} -cv -C ${IMAGE_ROOTFS} . | DOCKER_API_VERSION=1.22 docker import -)
     DOCKER_API_VERSION=1.22 docker save ${DOCKER_IMAGE} > ${BALENA_DOCKER_IMG}
 }
 
-IMAGE_TYPEDEP:hostapp-ext4 = "docker"
+IMAGE_TYPEDEP_hostapp-ext4 = "docker"
 
 do_image_hostapp_ext4[depends] = " \
     mkfs-hostapp-native:do_populate_sysroot \
     "
 
-IMAGE_CMD:hostapp-ext4 () {
+IMAGE_CMD_hostapp-ext4 () {
     dd if=/dev/zero of=${BALENA_HOSTAPP_IMG} seek=$ROOTFS_SIZE count=0 bs=1024
     mkfs.hostapp -t "${TMPDIR}" -s "${STAGING_DIR_NATIVE}" -i ${BALENA_DOCKER_IMG} -o ${BALENA_HOSTAPP_IMG}
 }

@@ -45,4 +45,4 @@ cleanup_docker() {
 $DOCKER load -i "$sysroot/usr/share/mkfs-hostapp-image.tar"
 trap cleanup_docker EXIT
 
-$DOCKER run --privileged --rm -v "$input:/input:ro" -v "$tmpdir:$tmpdir:ro" -v "$output:/output" -e "PATH=$PATH:$HOST_PATH" @IMAGE@ create.${fstype}
+$DOCKER run --privileged --rm -v "$input:/input:ro" -v "$tmpdir:$tmpdir:ro" -v "$output:/output" -e "PATH=$HOST_PATH:$PATH" @IMAGE@ create.${fstype}

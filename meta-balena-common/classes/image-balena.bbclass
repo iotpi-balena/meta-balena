@@ -409,7 +409,10 @@ def image_dump(image, attribute, tool="tune2fs"):
      cmd4 = subprocess.Popen(["tr", "-d", "[:blank:]"], stdin=cmd3.stdout, stdout=subprocess.PIPE)
      cmd3.stdout.close()
      rout,rerr = cmd4.communicate()
-     return int(rout)
+     if len(rout) != 0:
+        return int(rout)
+     else:
+        return 0
 
 # Calculate the available space in KiB on the provided ext4 image file
 # Input sizes are in bytes

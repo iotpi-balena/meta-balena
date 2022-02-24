@@ -32,7 +32,8 @@ do_configure[noexec] = "1"
 
 do_compile() {
     mkdir -p kernel_modules_headers
-    ${S}/gen_mod_headers ./kernel_modules_headers ${STAGING_KERNEL_DIR} ${DEPLOY_DIR_IMAGE} ${ARCH} ${TARGET_PREFIX} "${CC}" "${HOSTCC}"
+    # ${S}/gen_mod_headers ./kernel_modules_headers ${STAGING_KERNEL_DIR} ${DEPLOY_DIR_IMAGE} ${ARCH} ${TARGET_PREFIX} "${CC}" "${HOSTCC}"
+    ${S}/gen_mod_headers ./kernel_modules_headers ${STAGING_KERNEL_DIR} ${STAGING_KERNEL_BUILDDIR} ${ARCH} ${TARGET_PREFIX} "${CC}" "${HOSTCC}"
 
     # Sanity test
 

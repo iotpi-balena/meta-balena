@@ -1,7 +1,10 @@
 FILESEXTRAPATHS:append := ":${BALENA_COREBASE}/recipes-bsp/u-boot/patches"
 
-INTEGRATION_KCONFIG_PATCH = "file://resin-specific-env-integration-kconfig.patch"
-INTEGRATION_NON_KCONFIG_PATCH = "file://resin-specific-env-integration-non-kconfig.patch"
+# INTEGRATION_KCONFIG_PATCH = "file://resin-specific-env-integration-kconfig.patch"
+# INTEGRATION_NON_KCONFIG_PATCH = "file://resin-specific-env-integration-non-kconfig.patch"
+
+INTEGRATION_KCONFIG_PATCH = "file://0001-balena-specific-env-integration-Kconfig.patch"
+INTEGRATION_NON_KCONFIG_PATCH = ""
 
 # Machine independent patches
 SRC_URI:append = " \
@@ -34,10 +37,10 @@ do_configure:append() {
 }
 
 
-BALENA_BOOT_PART = "1"
-BALENA_DEFAULT_ROOT_PART = "2"
-BALENA_ENV_FILE = "resinOS_uEnv.txt"
-BALENA_EXTRA_ENV_FILE = "extra_uEnv.txt"
+BALENA_BOOT_PART ??= "1"
+BALENA_DEFAULT_ROOT_PART ??= "2"
+BALENA_ENV_FILE ?= "resinOS_uEnv.txt"
+BALENA_EXTRA_ENV_FILE ?= "extra_uEnv.txt"
 BALENA_UBOOT_DEVICES ?= "0 1 2"
 BALENA_UBOOT_DEVICE_TYPES ?= "mmc"
 

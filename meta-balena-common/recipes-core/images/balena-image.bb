@@ -21,7 +21,7 @@ IMAGE_FSTYPES = "${@bb.utils.contains('RESINHUP', 'yes', 'tar', '', d)}"
 
 inherit core-image image-balena features_check
 
-SPLASH += "plymouth-balena-theme"
+# SPLASH += "plymouth-balena-theme"
 
 IMAGE_FEATURES:append = " \
     splash \

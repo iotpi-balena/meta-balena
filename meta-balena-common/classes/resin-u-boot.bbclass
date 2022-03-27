@@ -3,7 +3,8 @@ FILESEXTRAPATHS:append := ":${BALENA_COREBASE}/recipes-bsp/u-boot/patches"
 # INTEGRATION_KCONFIG_PATCH = "file://resin-specific-env-integration-kconfig.patch"
 # INTEGRATION_NON_KCONFIG_PATCH = "file://resin-specific-env-integration-non-kconfig.patch"
 
-INTEGRATION_KCONFIG_PATCH = "file://0001-balena-specific-env-integration-Kconfig.patch"
+# INTEGRATION_KCONFIG_PATCH = "file://0001-balena-specific-env-integration-Kconfig.patch"
+INTEGRATION_KCONFIG_PATCH = ""
 INTEGRATION_NON_KCONFIG_PATCH = ""
 
 # Machine independent patches
@@ -54,6 +55,7 @@ OS_BOOTCOUNT_LIMIT ?= "3"
 # These options go into the device headerfile via config_resin.h
 CONFIG_RESET_TO_RETRY ?= "1"
 CONFIG_BOOT_RETRY_TIME ?= "${@bb.utils.contains('DISTRO_FEATURES', 'osdev-image', '-1', '15', d)}"
+# CONFIG_BOOT_RETRY_TIME ?= "2"
 
 CONFIG_CMD_FS_UUID = "1"
 

@@ -15,30 +15,30 @@ CARGO_SRC_DIR = ""
 
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
-SRC_URI += " \
-    crate://crates.io/bitflags/1.2.1 \
-    crate://crates.io/cc/1.0.46 \
-    crate://crates.io/cfg-if/0.1.10 \
-    crate://crates.io/cstr-argument/0.0.2 \
-    crate://crates.io/errno-dragonfly/0.1.1 \
-    crate://crates.io/errno/0.2.4 \
-    crate://crates.io/exec/0.3.1 \
-    crate://crates.io/gcc/0.3.55 \
-    crate://crates.io/getopts/0.2.21 \
-    crate://crates.io/libc/0.2.65 \
-    crate://crates.io/libsystemd-sys/0.2.2 \
-    crate://crates.io/log/0.4.8 \
-    crate://crates.io/memchr/1.0.2 \
-    crate://crates.io/nix/0.15.0 \
-    crate://crates.io/pkg-config/0.3.16 \
-    crate://crates.io/systemd/0.4.0 \
-    crate://crates.io/unicode-width/0.1.6 \
-    crate://crates.io/utf8-cstr/0.1.6 \
-    crate://crates.io/void/1.0.2 \
-    crate://crates.io/winapi-i686-pc-windows-gnu/0.4.0 \
-    crate://crates.io/winapi-x86_64-pc-windows-gnu/0.4.0 \
-    crate://crates.io/winapi/0.3.8 \
-"
+# SRC_URI += " \
+#     crate://crates.io/bitflags/1.2.1 \
+#     crate://crates.io/cc/1.0.46 \
+#     crate://crates.io/cfg-if/0.1.10 \
+#     crate://crates.io/cstr-argument/0.0.2 \
+#     crate://crates.io/errno-dragonfly/0.1.1 \
+#     crate://crates.io/errno/0.2.4 \
+#     crate://crates.io/exec/0.3.1 \
+#     crate://crates.io/gcc/0.3.55 \
+#     crate://crates.io/getopts/0.2.21 \
+#     crate://crates.io/libc/0.2.65 \
+#     crate://crates.io/libsystemd-sys/0.2.2 \
+#     crate://crates.io/log/0.4.8 \
+#     crate://crates.io/memchr/1.0.2 \
+#     crate://crates.io/nix/0.15.0 \
+#     crate://crates.io/pkg-config/0.3.16 \
+#     crate://crates.io/systemd/0.4.0 \
+#     crate://crates.io/unicode-width/0.1.6 \
+#     crate://crates.io/utf8-cstr/0.1.6 \
+#     crate://crates.io/void/1.0.2 \
+#     crate://crates.io/winapi-i686-pc-windows-gnu/0.4.0 \
+#     crate://crates.io/winapi-x86_64-pc-windows-gnu/0.4.0 \
+#     crate://crates.io/winapi/0.3.8 \
+# "
 
 
 

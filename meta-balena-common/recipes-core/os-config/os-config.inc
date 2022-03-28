@@ -1,4 +1,5 @@
-inherit systemd cargo-dyn
+inherit systemd
+# inherit systemd cargo-dyn
 
 DEPENDS += "dbus openssl"
 

@@ -15,13 +15,13 @@ PV:append = ".AUTOINC+f597fb0266"
 
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
-SRC_URI += " \
-crate://crates.io/errno/0.2.3 \
-crate://crates.io/kernel32-sys/0.2.2 \
-crate://crates.io/libc/0.2.36 \
-crate://crates.io/winapi-build/0.1.1 \
-crate://crates.io/winapi/0.2.8 \
-"
+# SRC_URI += " \
+# crate://crates.io/errno/0.2.3 \
+# crate://crates.io/kernel32-sys/0.2.2 \
+# crate://crates.io/libc/0.2.36 \
+# crate://crates.io/winapi-build/0.1.1 \
+# crate://crates.io/winapi/0.2.8 \
+# "
 
 LIC_FILES_CHKSUM="file://LICENSE;md5=3bfd34238ccc26128aef96796a8bbf97"
 

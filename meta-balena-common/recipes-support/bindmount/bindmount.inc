@@ -1,1 +1,1 @@
-inherit cargo-dyn
+# inherit cargo-dyn
